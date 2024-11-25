@@ -355,9 +355,7 @@ The hrbOS provides both options for managing container workloads:
 
 Users can freely choose and switch between both methods based on their preferences and needs. The system supports both approaches out of the box.
 
-The current configuration inherits all base packages from openSUSE Leap 15.4, which includes many resources not strictly necessary for running containers.
-
-Let's optimize this by creating a more minimal base configuration. We can modify the config/os-config.yaml to specify only essential packages:  
+this uaml below is a second option to create the os image.
 ```yaml  
 name: "hrbOS"
 version: "1.0.0"
@@ -390,20 +388,7 @@ post_install:
   commands:
     - systemctl enable docker
     - docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
-```  
-This configuration will create a cleaner system focused specifically on container workloads while maintaining essential functionality for system management and container operations. 
-The initial config of hrbOS will be based on openSUSE Leap 15.4, which is a stable and reliable Linux distribution. The base image is optimized for containerization, providing a solid foundation for running Docker containers.
-
-the latest config will significantly reduce the OS size since we're only including the essential packages needed for running containers and basic system management. By removing unnecessary packages from the base openSUSE image, we achieve a more compact and efficient operating system that's optimized specifically for container workloads.  
-
-The reduced footprint brings several benefits:
-* Faster boot times
-* Lower memory usage
-* Smaller storage requirements
-* Improved security through reduced attack surface
-* Quicker updates and maintenance
-
-This clean approach aligns perfectly with the project's goal of creating a specialized OS for running containerized applications.  
+```
+  The second configuration actually adds more packages (systemd, bash, coreutils, openssh, network-tools) and an additional service (sshd) compared to the first one.
 
 
-  
