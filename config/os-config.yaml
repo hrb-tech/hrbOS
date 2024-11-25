@@ -1,0 +1,21 @@
+name: "hrbOS"
+version: "1.0.0"
+base_image: "opensuse/leap:15.4"
+
+packages:
+  - docker
+  - docker-compose
+  - portainer
+  - curl
+  - wget
+  - git
+
+services:
+  enabled:
+    - docker
+    - portainer
+
+post_install:
+  commands:
+    - systemctl enable docker
+    - docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce

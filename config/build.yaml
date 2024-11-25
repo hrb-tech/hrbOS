@@ -1,0 +1,10 @@
+image:
+  repository: "hrb/os"
+  tag: "latest"
+
+iso:
+  filename: "hrbOS.iso"
+  label: "HRBOS_INSTALL"
+  
+boot:
+  cmdline: "console=tty1 root=LABEL=COS_STATE"
