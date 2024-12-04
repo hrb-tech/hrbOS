@@ -10,3 +10,7 @@ and should be the single way to access SO graphically.
  
 The first attempt using Elemental project discribed in [ai-dialogs.md](.docs/ai-dialogs.md) doesn't work yet.
 The elemental command line is launching errors when executing elemental create-iso .....
+
+A second attempt will try using k3os approach. ...
+
+This project isn't a priority, since it is possible to create the same environment using Debian/Ubuntu with docker installed.
