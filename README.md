@@ -1,9 +1,12 @@
 # hrbOS
-This project aims create a customized Operating systems to rum my containerized applications (docker and docker compose)
+This project aims to create a customized Operating system to run my containerized applications (docker and docker-compose)
 
 ## Final Goal
 Creates a bootable pen drive to install my hrb customized operational system.
-The OS should offer a robust environment to run workloads based on docker containers.
-It should have a portainer container pre-installed and running. It will be used to manage simple containerized apps 
+The OS should offer a robust environment for workloads based on docker containers.
+It should have a portainer container pre-installed and running. Portainer will manage simple containerized apps 
+and should be the single way to access SO graphically.
 
  
+The first attempt using Elemental project discribed in [ai-dialogs.md](.docs/ai-dialogs.md) doesn't work yet.
+The elemental command line is launching errors when executing elemental create-iso .....
