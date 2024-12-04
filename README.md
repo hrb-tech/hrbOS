@@ -8,7 +8,7 @@ It should have a portainer container pre-installed and running. Portainer will m
 and should be the single way to access SO graphically.
 
  
-The first attempt using Elemental project discribed in [ai-dialogs.md](.docs/ai-dialogs.md) doesn't work yet.
+The first attempt using Elemental project discribed in [ai-dialogs.md](./docs/ai-dialogs.md) doesn't work yet.
 The elemental command line is launching errors when executing elemental create-iso .....
 
 A second attempt will try using k3os approach. ...
